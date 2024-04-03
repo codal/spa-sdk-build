@@ -1214,7 +1214,11 @@
             return (_a = this.root) === null || _a === void 0 ? void 0 : _a.getComponent(...arguments);
         }
         getContent(reference) {
-            console.trace("getContent reference", reference);
+            if (typeof window !== "undefined") {
+                alert("getContent CALL");
+            }
+            console.log("getContent reference", reference);
+            console.trace(reference);
             const model = resolve(this.model, isReference(reference) ? reference : {
                 $ref: `/page/${reference}`
             });
