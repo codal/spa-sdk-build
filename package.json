@@ -1,0 +1,88 @@
+{
+  "name": "@bloomreach/spa-sdk",
+  "version": "22.0.0",
+  "description": "Bloomreach SPA SDK",
+  "keywords": [
+    "bloomreach",
+    "spa",
+    "sdk"
+  ],
+  "author": "Bloomreach B.V.",
+  "license": "Apache-2.0",
+  "homepage": "https://www.bloomreach.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bloomreach/spa-sdk",
+    "directory": "packages/spa-sdk"
+  },
+  "bugs": {
+    "url": "https://issues.onehippo.com/projects/SPASDK/issues"
+  },
+  "main": "dist/index.umd.js",
+  "browser": "dist/index.js",
+  "module": "dist/index.js",
+  "es2015": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "dev": "npm run build -- --watch",
+    "docs": "typedoc",
+    "lint": "eslint --ext js,ts src",
+    "prepack": "npm run build",
+    "test": "jest",
+    "yalcPush": "yalc push --replace --no-scripts"
+  },
+  "browserslist": [
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version",
+    "last 1 edge version"
+  ],
+  "dependencies": {
+    "cookie": "0.4.1",
+    "dom-serializer": "2.0.0",
+    "domutils": "3.0.1",
+    "emittery": "0.7.2",
+    "htmlparser2": "8.0.2",
+    "inversify": "5.1.1",
+    "reflect-metadata": "0.1.13"
+  },
+  "devDependencies": {
+    "@babel/core": "7.14.8",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "7.14.7",
+    "@babel/plugin-transform-object-assign": "7.14.5",
+    "@babel/polyfill": "7.12.1",
+    "@babel/preset-env": "7.14.8",
+    "@bloomreach/eslint-config-base": "1.1.0",
+    "@rollup/plugin-babel": "5.3.0",
+    "@types/cookie": "0.4.1",
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.11",
+    "babel-jest": "27.5.1",
+    "babel-plugin-transform-async-to-promises": "0.8.18",
+    "eslint": "7.32.0",
+    "jest": "27.5.1",
+    "jest-environment-jsdom": "27.5.1",
+    "jest-junit": "12.2.0",
+    "js-beautify": "1.14.0",
+    "rollup": "2.79.1",
+    "rollup-plugin-dts": "3.0.2",
+    "rollup-plugin-terser": "7.0.2",
+    "rollup-plugin-typescript2": "0.31.2",
+    "ts-jest": "27.1.5",
+    "typedoc": "0.22.18",
+    "typedoc-plugin-missing-exports": "1.0.0",
+    "typescript": "4.5.5",
+    "yalc": "1.0.0-pre.53"
+  },
+  "eslintConfig": {
+    "extends": "@bloomreach/eslint-config-base",
+    "rules": {
+      "import/no-cycle": "off"
+    }
+  }
+}
